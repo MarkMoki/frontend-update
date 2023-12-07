@@ -1,0 +1,180 @@
+/* styles.css */
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffbf00, #32cd32); /* Luminous green and orange blend */
+    color: #333; /* Text color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container styles */
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Heading styles */
+  h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Input styles */
+  input[type="text"],
+  textarea,
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+    box-sizing: border-box;
+    font-size: 1.2em; /* Larger font size */
+  }
+  
+  textarea {
+    height: 150px; /* Adjust the height of the textarea */
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #ccc; /* Grey background */
+    color: #333; /* Text color */
+    font-size: 1.2em; /* Larger font size */
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #999; /* Darker grey on hover */
+    color: #fff; /* Text color on hover */
+  }
+  
+/* CSS Styles for WhatsApp-like UI */
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+/* ... (existing styles remain unchanged) */
+
+/* WhatsApp-like UI */
+
+.wcontainer {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #075e54; /* WhatsApp Green Color */
+}
+
+.profile-info h1 {
+  font-size: 16px;
+  color: #888;
+}
+
+.message-history {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.conversation {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.sent-message {
+  background-color: #dcf8c6; /* WhatsApp Light Green Color */
+  align-self: flex-start;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 70%;
+}
+
+.sent {
+  align-self: flex-end;
+  text-align: right;
+  background-color: #e2e2e2; /* Gray Background for Sent Messages */
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 70%;
+}
+
+.message {
+  margin-top: 5px;
+}
+
+.text-area {
+  width: calc(100% - 90px);
+  height: 80px;
+  resize: none;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.submit-button {
+  width: 80px;
+  height: 35px;
+  padding: 0 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #075e54; /* WhatsApp Green Color */
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.submit-button:disabled {
+  background-color: #999; /* Gray Out Disabled Send Button */
+  cursor: not-allowed;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.received-bubble {
+  background-color: #e2e2e2; /* Gray Background for Received Messages */
+  align-self: flex-start;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 70%;
+  margin-bottom: 5px;
+}
+
+.sent-bubble {
+  align-self: flex-end;
+  text-align: right;
+  background-color: #dcf8c6; /* WhatsApp Light Green Color */
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 70%;
+  margin-bottom: 5px;
+}
