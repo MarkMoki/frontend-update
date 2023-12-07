@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom'; 
+import { useNavigate } from 'react-router-dom'; 
 import axios from 'axios';
 import '../styles/styles.css'; 
 
@@ -7,7 +7,7 @@ const LandingPage = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [responseMessage, setResponseMessage] = useState('');
   const [error, setError] = useState('');
-  const history = useHistory(); // Access history object
+  const navigate = useNavigate(); // Access navigate function for v6
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,12 +26,12 @@ const LandingPage = () => {
 
       setResponseMessage(response.data.status);
 
-      // Redirect to the Second Page using React Router DOM
+      // Redirect to the Second Page using React Router DOM (v6)
       if (
         response.data.status.includes('Welcome to our dating service') ||
         response.data.status.includes('You are registered for dating.')
       ) {
-        history.push(`/secondpage?phoneNumber=${phoneNumber}&responseMessage=${encodeURIComponent(response.data.status)}`);
+        navigate(`/secondpage?phoneNumber=${phoneNumber}&responseMessage=${encodeURIComponent(response.data.status)}`);
       }
     } catch (error) {
       console.error('Error occurred:', error);
@@ -65,4 +65,3 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-
